@@ -1,13 +1,13 @@
 import styled from "styled-components";
+import { HiPencil, HiSquare2Stack, HiTrash } from "react-icons/hi2";
 import Modal from "../../ui/Modal";
 import Table from "../../ui/Table";
+import Menus from "../../ui/Menus";
 import CreateCabinForm from "./CreateCabinForm";
 import ConfirmDelete from "../../ui/ConfirmDelete";
 import { formatCurrency } from "../../utils/helpers";
 import { useDeleteCabin } from "./useDeleteCabin";
 import { useCreateCabin } from "./useCreateCabin";
-import { HiPencil, HiSquare2Stack, HiTrash } from "react-icons/hi2";
-import Menus from "../../ui/Menus";
 
 const Img = styled.img`
   display: block;
