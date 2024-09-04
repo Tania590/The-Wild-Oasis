@@ -112,14 +112,12 @@ export async function getStaysTodayActivity() {
   return data;
 }
 
-export async function updateBooking(id, obj) {
+export async function updateBooking(obj, id) {
   const { data, error } = await supabase
     .from("bookings")
     .update(obj)
     .eq("id", id)
-    .select()
-    .single();
-
+    .select();
   if (error) {
     console.error(error);
     throw new Error("Booking could not be updated");
