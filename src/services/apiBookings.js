@@ -18,6 +18,7 @@ export async function getBookings({ filter, sortBy, page }) {
   );
 
   if (filter) query = query[filter.method || "eq"](filter.field, filter.value);
+
   if (sortBy)
     query = query.order(sortBy.field, {
       ascending: sortBy.direction === "asc",
