@@ -6,12 +6,14 @@ import { useNavigate } from "react-router-dom";
 export function useCheckin() {
   const queryClient = useQueryClient();
   const navigate = useNavigate();
+
   const { mutate: checkin, isPending: isCheckingIn } = useMutation({
-    mutationFn: (id) =>
+    mutationFn: ({ id, breakfast }) =>
       updateBooking(
         {
           isPaid: true,
           status: "checked-in",
+          ...breakfast,
         },
         id
       ),
