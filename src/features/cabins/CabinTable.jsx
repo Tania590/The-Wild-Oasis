@@ -7,10 +7,10 @@ import { useSearchParams } from "react-router-dom";
 import Empty from "../../ui/Empty";
 
 function CabinTable() {
-  const { isPending, cabins } = useCabins();
+  const { isLoading, cabins } = useCabins();
   const [searchParams] = useSearchParams();
 
-  if (isPending) return <Spinner />;
+  if (isLoading) return <Spinner />;
   if (!cabins.length) return <Empty resourceName="cabins" />;
   // filter
   const filteredValue = searchParams.get("discount") || "all";
