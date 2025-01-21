@@ -20,6 +20,7 @@ function Sidebar() {
       <Logo />
       <MainNav />
       <Uploader />
+      {/* can ommit */}
     </StyledSidebar>
   );
 }
