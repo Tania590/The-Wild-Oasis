@@ -1,7 +1,7 @@
 import { useSearchParams } from "react-router-dom";
-import { getStaysAfterDate } from "../../services/apiBookings";
-import { subDays } from "date-fns";
 import { useQuery } from "@tanstack/react-query";
+import { subDays } from "date-fns";
+import { getStaysAfterDate } from "../../services/apiBookings";
 
 export function useRecentStays() {
   const [searchParams] = useSearchParams();
